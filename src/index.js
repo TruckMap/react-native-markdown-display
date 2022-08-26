@@ -185,6 +185,7 @@ const Markdown = React.memo(
     return parser(children, momoizedRenderer.render, momoizedParser);
   },
 );
+Markdown.displayName = 'Markdown';
 
 Markdown.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.array]).isRequired,

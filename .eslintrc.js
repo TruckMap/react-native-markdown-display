@@ -1,9 +1,18 @@
 module.exports = {
-  root: true,
-  extends: '@react-native-community',
-  settings: {
-      react: {
-          version: require('./package.json').peerDependencies.react,
-      },
-  }
+  env: {
+    node: true,
+    browser: false,
+    es6: true,
+  },
+  extends: ['eslint:recommended', 'plugin:react/recommended'],
+  parser: '@babel/eslint-parser',
+  parserOptions: {
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  rules: {
+    'no-unused-vars': 'warn',
+  },
 };
